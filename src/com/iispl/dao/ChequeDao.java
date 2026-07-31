@@ -8,14 +8,16 @@ import com.iispl.model.Cheque;
 public interface ChequeDao {
 	
 //	sortByChequeAmountAscending
-	List<Cheque> sortByChequeAmountAscending();
+	List<Cheque> sortByChequeAmountAscending(List<Cheque> chequeList);
 //  sortByChequeAmountDescending
-	List<Cheque> sortByChequeAmountDescending();
+	List<Cheque> sortByChequeAmountDescending(List<Cheque> chequeList);
 	
-    List<Cheque> sortByPresentingBankAndAmount();
+    List<Cheque> sortByPresentingBankAndAmount(List<Cheque> chequeList);
 	
-	List<Cheque> sortByPriorityAndStatus();
+	List<Cheque> sortByPriorityAndStatus(List<Cheque> chequeList);
 	
-	List<Cheque> sortChequeByDate();
+	List<Cheque> sortChequeByDate(List<Cheque> chequeList);
+	
+	List<Cheque> getChequeRecords();
 
 }

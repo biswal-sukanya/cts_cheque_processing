@@ -97,8 +97,16 @@ public class Cheque {
 
 	@Override
 	public String toString() {
-		return "Cheque [chequeNumber=" + chequeNumber + ", drawerName=" + drawerName + ", presentingBank="
-				+ presentingBank + ", chequeAmount=" + chequeAmount + ", chequeDate=" + chequeDate + ", presentedDate="
-				+ presentedDate + ", priority=" + priority + ", status=" + status + "]";
+
+	    return String.format(
+	            "%-10s %-20s %-18s %-12s %-15s %-15s %-15s %-15s",
+	            chequeNumber,
+	            drawerName,
+	            presentingBank,
+	            chequeAmount,
+	            chequeDate,
+	            presentedDate,
+	            priority,
+	            status);
 	}
 }
