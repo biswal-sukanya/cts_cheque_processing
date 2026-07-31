@@ -1,6 +1,6 @@
 package com.iispl.exception;
 
-public class InvalidChequeAmount extends Exception {
+public class InvalidChequeAmountException extends Exception {
 	
 	
 	
