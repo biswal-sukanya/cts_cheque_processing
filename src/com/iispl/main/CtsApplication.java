@@ -27,7 +27,7 @@ public static void main(String[] args) {
 	    System.out.println("3. Sort By Cheque Amount Descending");
 	    System.out.println("4. Sort By Priority And Status");
 	    System.out.println("5. Sort By Presenting Bank And Amount");
-	    System.out.println("6. Sort By Cheque Date");
+	    System.out.println("6. Sort By Cheque Date and Presented date");
 	    System.out.println("7. Exit");
 
 	    choice = sc.nextInt();
