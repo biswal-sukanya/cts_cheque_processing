@@ -16,11 +16,13 @@ public class ChequeServiceImpl implements ChequeService {
 	public List<Cheque> sortByPriorityAndStatus() {
 		
 		return chequeDao.sortByPriorityAndStatus();
+	}
 //  feature/sortChequeByDate
 	//sorting Cheque by date By sharan
 	@Override
 	public List<Cheque> sortChequeByDate() {
 		return chequeDao.sortChequeByDate();
+	}
 
 	@Override
 	public List<Cheque> sortByPresentingBankAndAmount() {
