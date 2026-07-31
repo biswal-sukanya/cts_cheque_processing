@@ -66,7 +66,13 @@ public class ChequeDaoImpl implements ChequeDao{
 	@Override
 	public List<Cheque> sortChequeByDate(List<Cheque> chequeList) {
 		
-		Collections.sort(chequeList,(c1,c2)->c1.getChequeDate().compareTo(c2.getChequeDate()));
+		chequeList.sort((c1,c2)->{
+			int presentedDate=c1.getPresentedDate().compareTo(c2.getPresentedDate());
+			if(presentedDate!=0) {
+				return presentedDate;
+			}
+			return c1.getChequeDate().compareTo(c2.getChequeDate());
+		});
 		return chequeList;
 	}
 	//SORT BY BANK AND AMOUNT FUNCTIONALITY ADDED BY ABHIJITH
