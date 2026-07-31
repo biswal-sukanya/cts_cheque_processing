@@ -17,6 +17,8 @@ public static void main(String[] args) {
 	ChequeService chequeService = new ChequeServiceImpl();
 
 	List<Cheque> chequeList = chequeService.getChequeRecords();
+	
+	chequeService.validateCheques(chequeList);
 
 	int choice;
 
@@ -28,7 +30,8 @@ public static void main(String[] args) {
 	    System.out.println("4. Sort By Priority And Status");
 	    System.out.println("5. Sort By Presenting Bank And Amount");
 	    System.out.println("6. Sort By Cheque Date and Presented date");
-	    System.out.println("7. Exit");
+	    System.out.println("7. Display High Value Cheques");
+	    System.out.println("8. Exit");
 
 	    choice = sc.nextInt();
 
@@ -63,13 +66,17 @@ public static void main(String[] args) {
 	        break;
 
 	    case 7:
-	        System.out.println("Thank You");
+	    	 chequeService.displayAllCheques(
+	    	chequeService.displayHighValueCheque(chequeList));
 	        break;
+	        
+	    case 8:
+	    	System.out.println("Thank You..."); break;
 
 	    default:
 	        System.out.println("Invalid Choice");
 	    }
 
-	} while (choice != 7);
+	} while (choice != 8);
 }
 }

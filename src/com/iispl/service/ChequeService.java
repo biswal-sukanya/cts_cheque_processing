@@ -22,5 +22,9 @@ public interface ChequeService {
 	
 	List<Cheque> getChequeRecords();
 	
+	void validateCheques(List<Cheque> chequeList);
+	
+	List<Cheque> displayHighValueCheque(List<Cheque> chequeList);
+	
 	
 }

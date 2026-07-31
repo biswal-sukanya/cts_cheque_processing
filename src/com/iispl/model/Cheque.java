@@ -99,7 +99,7 @@ public class Cheque {
 	public String toString() {
 
 	    return String.format(
-	            "%-10s %-20s %-18s %-12s %-15s %-15s %-15s %-15s",
+	            "%-10s %-20s %-20s %-12s %-15s %-15s %-15s %-15s",
 	            chequeNumber,
 	            drawerName,
 	            presentingBank,
