@@ -10,6 +10,12 @@ public class ChequeServiceImpl implements ChequeService {
 
 	static ChequeDao chequeDao = new ChequeDaoImpl();
 
+//  feature/sort_prioritystatus
+	//added by Shair-Yaar-Khan
+	@Override
+	public List<Cheque> sortByPriorityAndStatus() {
+		
+		return chequeDao.sortByPriorityAndStatus();
 //  feature/sortChequeByDate
 	//sorting Cheque by date By sharan
 	@Override
