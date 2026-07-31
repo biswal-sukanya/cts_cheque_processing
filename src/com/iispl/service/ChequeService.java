@@ -8,15 +8,19 @@ import com.iispl.model.Cheque;
 
 public interface ChequeService {
 	
-    List<Cheque> sortByPresentingBankAndAmount();
+    List<Cheque> sortByPresentingBankAndAmount(List<Cheque> chequeList);
 	
-	List<Cheque> sortByPriorityAndStatus();
+	List<Cheque> sortByPriorityAndStatus(List<Cheque> chequeList);
 	
-	List<Cheque> sortByChequeAmountAscending();
+	List<Cheque> sortByChequeAmountAscending(List<Cheque> chequeList);
 	
-	List<Cheque> sortByChequeAmountDescending();
+	List<Cheque> sortByChequeAmountDescending(List<Cheque> chequeList);
 	
-	List<Cheque> sortChequeByDate();
+	List<Cheque> sortChequeByDate(List<Cheque> chequeList);
+	
+	void displayAllCheques(List<Cheque> chequeList);
+	
+	List<Cheque> getChequeRecords();
 	
 	
 }

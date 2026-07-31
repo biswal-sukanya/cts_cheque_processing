@@ -22,9 +22,7 @@ public class ChequeDaoImpl implements ChequeDao{
 	
 	//added by Shair-Yaar-Khan
 	@Override
-	public List<Cheque> sortByPriorityAndStatus() {
-		
-		List<Cheque> chequeList = chequeRepository.chequeRecords();
+	public List<Cheque> sortByPriorityAndStatus(List<Cheque> chequeList) {
 		
 		chequeList.sort((c1,c2)->{
 			
@@ -43,48 +41,54 @@ public class ChequeDaoImpl implements ChequeDao{
 	
 	
 	@Override
-	public List<Cheque> sortByChequeAmountAscending() {
+	public List<Cheque> sortByChequeAmountAscending(List<Cheque> chequeList) {
 
-	    List<Cheque> cheques = chequeRepository.chequeRecords();
+	    
 
-	    cheques.sort((c1, c2) ->
+		chequeList.sort((c1, c2) ->
 	        c1.getChequeAmount().compareTo(c2.getChequeAmount()));
 
-	    return cheques;
+	    return chequeList;
 	}
 
 	@Override
-	public List<Cheque> sortByChequeAmountDescending() {
+	public List<Cheque> sortByChequeAmountDescending(List<Cheque> chequeList) {
 
-	    List<Cheque> cheques = chequeRepository.chequeRecords();
-
-	    cheques.sort((c1, c2) ->
+		chequeList.sort((c1, c2) ->
 	        c2.getChequeAmount().compareTo(c1.getChequeAmount()));
 
-	    return cheques;
+	    return chequeList;
 	}
+	
+	
 //  feature/sortChequeByDate
 	//sorting Cheque by date By sharan
 	@Override
-	public List<Cheque> sortChequeByDate() {
-		List<Cheque> cheques=chequeRepository.chequeRecords();
-		Collections.sort(cheques,(c1,c2)->c1.getChequeDate().compareTo(c2.getChequeDate()));
-		return cheques;
+	public List<Cheque> sortChequeByDate(List<Cheque> chequeList) {
+		
+		Collections.sort(chequeList,(c1,c2)->c1.getChequeDate().compareTo(c2.getChequeDate()));
+		return chequeList;
 	}
 	//SORT BY BANK AND AMOUNT FUNCTIONALITY ADDED BY ABHIJITH
 	@Override
-	public List<Cheque> sortByPresentingBankAndAmount() {
+	public List<Cheque> sortByPresentingBankAndAmount(List<Cheque> chequeList) {
 		
-		List<Cheque> cheques=chequeRepository.chequeRecords();
-		Collections.sort(cheques,(c1,c2)->{
+		
+		Collections.sort(chequeList,(c1,c2)->{
 			int bank=c1.getPresentingBank().compareTo(c2.getPresentingBank());
 			if(bank!=0) {
 				return bank;
 			}
 			return c1.getChequeAmount().compareTo(c2.getChequeAmount());
 		});	
-		return cheques;
+		return chequeList;
 
+	}
+
+	@Override
+	public List<Cheque> getChequeRecords() {
+		
+		return chequeRepository.chequeRecords();
 	}
 }
 
