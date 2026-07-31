@@ -1,6 +1,6 @@
 package com.iispl.exception;
 
-public class InvalidChequePriority extends Exception {
+public class InvalidChequePriorityException extends Exception {
 
 	@Override
 	public String getMessage() {

@@ -1,6 +1,6 @@
 package com.iispl.exception;
 
-public class InvalidChequeStatus extends Exception {
+public class InvalidChequeStatusException extends Exception {
 
 	@Override
 	public String getMessage() {
