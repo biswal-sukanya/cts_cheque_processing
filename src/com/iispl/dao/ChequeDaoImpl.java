@@ -1,5 +1,9 @@
 package com.iispl.dao;
 
-public class ChequeDaoImpl {
+import com.iispl.repository.ChequeRepository;
+import com.iispl.repository.ChequeRepositoryImpl;
 
+public class ChequeDaoImpl implements ChequeDao{
+
+	static ChequeRepository chequeRepository = new ChequeRepositoryImpl();
 }
