@@ -7,4 +7,5 @@ import com.iispl.model.Cheque;
 public interface ChequeRepository {
 
 	List<Cheque> chequeRecords();
+
 }

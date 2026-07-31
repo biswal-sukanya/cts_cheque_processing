@@ -23,4 +23,14 @@ public class ChequeServiceImpl implements ChequeService {
 
 	}
 	
+	@Override
+	public List<Cheque> sortByChequeAmountAscending() {
+	    return chequeDao.sortByChequeAmountAscending();
+	}
+
+	@Override
+	public List<Cheque> sortByChequeAmountDescending() {
+	    return chequeDao.sortByChequeAmountDescending();
+	}
+	
 }

@@ -1,5 +1,6 @@
 package com.iispl.dao;
 
+//  feature/short_chequeamount_Ascending&Decending
 import java.util.Collections;
 // feature/sortChequeByDate
 import java.util.Comparator;
@@ -13,6 +14,29 @@ import com.iispl.repository.ChequeRepositoryImpl;
 public class ChequeDaoImpl implements ChequeDao{
 
 	static ChequeRepository chequeRepository = new ChequeRepositoryImpl();
+//  feature/short_chequeamount_Ascending&Decending
+	
+	
+	@Override
+	public List<Cheque> sortByChequeAmountAscending() {
+
+	    List<Cheque> cheques = chequeRepository.chequeRecords();
+
+	    cheques.sort((c1, c2) ->
+	        c1.getChequeAmount().compareTo(c2.getChequeAmount()));
+
+	    return cheques;
+	}
+
+	@Override
+	public List<Cheque> sortByChequeAmountDescending() {
+
+	    List<Cheque> cheques = chequeRepository.chequeRecords();
+
+	    cheques.sort((c1, c2) ->
+	        c2.getChequeAmount().compareTo(c1.getChequeAmount()));
+
+	    return cheques;
 //  feature/sortChequeByDate
 	//sorting Cheque by date By sharan
 	@Override
@@ -33,6 +57,7 @@ public class ChequeDaoImpl implements ChequeDao{
 			return c1.getChequeAmount().compareTo(c2.getChequeAmount());
 		});	
 		return cheques;
+
 	}
 }
 
