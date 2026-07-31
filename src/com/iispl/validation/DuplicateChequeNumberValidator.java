@@ -12,14 +12,11 @@ public class DuplicateChequeNumberValidator implements Validator {
 
 	@Override
 	public void validate(Cheque cheque) throws DuplicateChequeNumberException {
-		List<Cheque> cheques= chequeRepository.chequeRecords();
-		for(Cheque c: cheques) {
-			if(c.getChequeNumber()==cheque.getChequeNumber()) {
-				throw new DuplicateChequeNumberException();
-			}
-		}
 		
-
+		long count = chequeRepository.chequeRecords().stream().filter(c->c.getChequeNumber().equals(cheque.getChequeNumber())).count();
+		
+		if(count>1)
+			throw new DuplicateChequeNumberException();	
 	}
 
 }

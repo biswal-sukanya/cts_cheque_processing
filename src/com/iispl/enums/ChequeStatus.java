@@ -2,9 +2,9 @@ package com.iispl.enums;
 
 public enum ChequeStatus {
 
-	RECEIVED,
-	VALIDATED,
 	ACCEPTED,
+	RECEIVED,
 	REJECTED,
-	SENT_FOR_CLEARING;
+	SENT_FOR_CLEARING,
+	VALIDATED;
 }
