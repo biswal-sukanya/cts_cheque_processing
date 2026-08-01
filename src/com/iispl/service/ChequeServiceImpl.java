@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.iispl.dao.ChequeDao;
 import com.iispl.dao.ChequeDaoImpl;
+import com.iispl.enums.ChequeStatus;
 import com.iispl.model.Cheque;
 import com.iispl.validation.ChequeAmountValidator;
 import com.iispl.validation.ChequeDateValidator;
@@ -65,7 +66,7 @@ public class ChequeServiceImpl implements ChequeService {
 		    }
 
 		    System.out.println("========================================================================================================================================");
-		    System.out.printf("%-10s %-20s %-20s %-12s %-15s %-15s %-15s %-15ss%n",
+		    System.out.printf("%-10s %-20s %-20s %-12s %-15s %-15s %-15s %-15s%n",
 		            "Cheque No",
 		            "Drawer Name",
 		            "Presenting Bank",
@@ -75,7 +76,7 @@ public class ChequeServiceImpl implements ChequeService {
 		            "Priority",
 		            "Status");
 
-		    System.out.println("========================================================================================================================================");
+		    System.out.println();
 
 		    chequeList.forEach(System.out::println);
 
@@ -103,21 +104,40 @@ public class ChequeServiceImpl implements ChequeService {
 		validators.add(new PriorityValidator());
 		validators.add(new StatusValidator());
 		
-		chequeList.forEach(cheque->{
+		for(Cheque cheque : chequeList){
 			
 			System.out.println("\n-----------------------------------------------");
 			System.out.println("Cheque Number : "+ cheque.getChequeNumber()+"\n");
 			
-			validators.forEach(validator->{
+			boolean valid = true;
+			
+			for(Validator validator:validators){
+				
 				try {
+					
 					validator.validate(cheque);
+					
 				}catch(Exception e) {
+					
+					valid = false;
+					
+					cheque.setStatus(ChequeStatus.REJECTED);
 					System.out.println(validator.getClass().getSimpleName()+" : "+e.getMessage());
 				}
-			});
-		});
+			}
+			if(valid) {
+				cheque.setStatus(ChequeStatus.VALIDATED);
+				System.out.println("Validation Status : "+cheque.getStatus());
+			}else {
+				cheque.setStatus(ChequeStatus.REJECTED);
+				System.out.println("Validation Status : "+cheque.getStatus());
+			}
+			System.out.println("===============================================================================");
+		}
 		
 	}
+	
+	
 	@Override
 	public List<Cheque> displayHighValueCheque(List<Cheque> chequeList) {
 		

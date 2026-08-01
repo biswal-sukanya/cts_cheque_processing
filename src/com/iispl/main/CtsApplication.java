@@ -17,21 +17,20 @@ public static void main(String[] args) {
 	ChequeService chequeService = new ChequeServiceImpl();
 
 	List<Cheque> chequeList = chequeService.getChequeRecords();
-	
-	chequeService.validateCheques(chequeList);
 
 	int choice;
 
 	do {
 
 	    System.out.println("1. Display All Cheques");
-	    System.out.println("2. Sort By Cheque Amount Ascending");
-	    System.out.println("3. Sort By Cheque Amount Descending");
-	    System.out.println("4. Sort By Priority And Status");
-	    System.out.println("5. Sort By Presenting Bank And Amount");
-	    System.out.println("6. Sort By Cheque Date and Presented date");
-	    System.out.println("7. Display High Value Cheques");
-	    System.out.println("8. Exit");
+	    System.out.println("2  Validate All Cheques");
+	    System.out.println("3. Sort By Cheque Amount Ascending");
+	    System.out.println("4. Sort By Cheque Amount Descending");
+	    System.out.println("5. Sort By Priority And Status");
+	    System.out.println("6. Sort By Presenting Bank And Amount");
+	    System.out.println("7. Sort By Cheque Date and Presented date");
+	    System.out.println("8. Display High Value Cheques");
+	    System.out.println("9. Exit");
 
 	    choice = sc.nextInt();
 
@@ -40,43 +39,45 @@ public static void main(String[] args) {
 	    case 1:
 	        chequeService.displayAllCheques(chequeList);
 	        break;
+	        
+	    case 2: chequeService.validateCheques(chequeList); break;   
 
-	    case 2:
+	    case 3:
 	        chequeService.displayAllCheques(chequeService.sortByChequeAmountAscending(chequeList));
 	        break;
 	        
-	    case 3:
+	    case 4:
 	        chequeService.displayAllCheques(
 	        		chequeService.sortByChequeAmountDescending(chequeList));
 	        break;    
 
-	    case 4:
+	    case 5:
 	        chequeService.displayAllCheques(
 	                chequeService.sortByPriorityAndStatus(chequeList));
 	        break;
 
-	    case 5:
+	    case 6:
 	        chequeService.displayAllCheques(
 	                chequeService.sortByPresentingBankAndAmount(chequeList));
 	        break;
 
-	    case 6:
+	    case 7:
 	        chequeService.displayAllCheques(
 	                chequeService.sortChequeByDate(chequeList));
 	        break;
 
-	    case 7:
+	    case 8:
 	    	 chequeService.displayAllCheques(
 	    	chequeService.displayHighValueCheque(chequeList));
 	        break;
 	        
-	    case 8:
+	    case 9:
 	    	System.out.println("Thank You..."); break;
 
 	    default:
 	        System.out.println("Invalid Choice");
 	    }
 
-	} while (choice != 8);
+	} while (choice != 9);
 }
 }

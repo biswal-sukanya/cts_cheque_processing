@@ -15,8 +15,8 @@ public class ChequeRepositoryImpl implements ChequeRepository {
 	@Override
 	public List<Cheque> chequeRecords() {
 		if(cheques.isEmpty()) {
-cheques.add(new Cheque("CHQ001", "S Sharma", "SBI", new BigDecimal("215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
-cheques.add(new Cheque("CHQ002", "Aisha Khan", "HDFC", new BigDecimal("225000"), LocalDate.of(2026,7,3), LocalDate.of(2026,7,4), ChequePriority.NORMAL, ChequeStatus.RECEIVED));
+cheques.add(new Cheque("CHQ001", "S Sharma", "SBI", new BigDecimal("-215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
+cheques.add(new Cheque("CHQ0020", "Aisha Khan", "HDFC", new BigDecimal("225000"), LocalDate.of(2026,7,3), LocalDate.of(2026,7,4), ChequePriority.NORMAL, ChequeStatus.RECEIVED));
 cheques.add(new Cheque("CHQ003", "Rohit Kumar", "ICICI", new BigDecimal("5000"), LocalDate.of(2026,7,5), LocalDate.of(2026,7,6), ChequePriority.LOW, ChequeStatus.REJECTED));
 cheques.add(new Cheque("CHQ004", "Sneha Reddy", "Axis Bank", new BigDecimal("475000"), LocalDate.of(2026,7,6), LocalDate.of(2026,7,7), ChequePriority.HIGH, ChequeStatus.SENT_FOR_CLEARING));
 cheques.add(new Cheque("CHQ005", "Arjun Patel", "Canara Bank", new BigDecimal("12000"), LocalDate.of(2026,7,7), LocalDate.of(2026,7,8), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
