@@ -9,14 +9,13 @@ import com.iispl.service.ChequeServiceImpl;
 
 public class CtsApplication {
 	
-	static ChequeService chequeService = new ChequeServiceImpl();
 	static Scanner sc = new Scanner(System.in);
 	
 public static void main(String[] args) {
 	
 	ChequeService chequeService = new ChequeServiceImpl();
 
-	List<Cheque> chequeList = chequeService.getChequeRecords();
+	List<Cheque> chequeList = chequeService.getAllCheques();
 
 	int choice;
 

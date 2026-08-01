@@ -18,6 +18,6 @@ public interface ChequeDao {
 	
 	List<Cheque> sortChequeByDate(List<Cheque> chequeList);
 	
-	List<Cheque> getChequeRecords();
+	List<Cheque> getAllCheques();
 
 }

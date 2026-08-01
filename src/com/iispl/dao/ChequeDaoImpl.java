@@ -37,13 +37,9 @@ public class ChequeDaoImpl implements ChequeDao{
 		return chequeList;
 	}	
 
-//  feature/short_chequeamount_Ascending&Decending
-	
-	
+//  feature/sort_chequeamount_Ascending&Decending
 	@Override
 	public List<Cheque> sortByChequeAmountAscending(List<Cheque> chequeList) {
-
-	    
 
 		chequeList.sort((c1, c2) ->
 	        c1.getChequeAmount().compareTo(c2.getChequeAmount()));
@@ -92,9 +88,9 @@ public class ChequeDaoImpl implements ChequeDao{
 	}
 
 	@Override
-	public List<Cheque> getChequeRecords() {
+	public List<Cheque> getAllCheques() {
 		
-		return chequeRepository.chequeRecords();
+		return chequeRepository.getAllCheques();
 	}
 }
 

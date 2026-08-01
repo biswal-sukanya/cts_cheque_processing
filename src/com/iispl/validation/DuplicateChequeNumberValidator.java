@@ -13,7 +13,7 @@ public class DuplicateChequeNumberValidator implements Validator {
 	@Override
 	public void validate(Cheque cheque) throws DuplicateChequeNumberException {
 		
-		long count = chequeRepository.chequeRecords().stream().filter(c->c.getChequeNumber().equals(cheque.getChequeNumber())).count();
+		long count = chequeRepository.getAllCheques().stream().filter(c->c.getChequeNumber().equals(cheque.getChequeNumber())).count();
 		
 		if(count>1)
 			throw new DuplicateChequeNumberException();	

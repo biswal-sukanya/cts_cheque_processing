@@ -85,9 +85,9 @@ public class ChequeServiceImpl implements ChequeService {
 	
 	
 	@Override
-	public List<Cheque> getChequeRecords() {
+	public List<Cheque> getAllCheques() {
 		
-		return chequeDao.getChequeRecords();
+		return chequeDao.getAllCheques();
 	}
 	@Override
 	public void validateCheques(List<Cheque> chequeList) {
@@ -106,12 +106,12 @@ public class ChequeServiceImpl implements ChequeService {
 		
 		for(Cheque cheque : chequeList){
 			
-			System.out.println("\n-----------------------------------------------");
+			System.out.println("\n-------------------------------------------------------------");
 			System.out.println("Cheque Number : "+ cheque.getChequeNumber()+"\n");
 			
 			boolean valid = true;
 			
-			for(Validator validator:validators){
+			for(Validator validator : validators){
 				
 				try {
 					
@@ -123,16 +123,25 @@ public class ChequeServiceImpl implements ChequeService {
 					
 					cheque.setStatus(ChequeStatus.REJECTED);
 					System.out.println(validator.getClass().getSimpleName()+" : "+e.getMessage());
+					System.out.println();
 				}
 			}
 			if(valid) {
 				cheque.setStatus(ChequeStatus.VALIDATED);
-				System.out.println("Validation Status : "+cheque.getStatus());
+				
 			}else {
 				cheque.setStatus(ChequeStatus.REJECTED);
-				System.out.println("Validation Status : "+cheque.getStatus());
+				
 			}
-			System.out.println("===============================================================================");
+			
+			System.out.println("Cheque Number     : " + cheque.getChequeNumber());
+			System.out.println("Drawer Name       : " + cheque.getDrawerName());
+			System.out.println("Cheque Amount     : " + cheque.getChequeAmount());
+			System.out.println("Presenting Bank   : " + cheque.getPresentingBank());
+			System.out.println("Presented Date    : " + cheque.getPresentedDate());
+			System.out.println("Status            : " + cheque.getStatus());
+			
+			System.out.println("-------------------------------------------------------------");
 		}
 		
 	}
