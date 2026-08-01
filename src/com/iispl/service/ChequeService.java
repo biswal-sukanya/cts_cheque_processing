@@ -20,7 +20,7 @@ public interface ChequeService {
 	
 	void displayAllCheques(List<Cheque> chequeList);
 	
-	List<Cheque> getChequeRecords();
+	List<Cheque> getAllCheques();
 	
 	void validateCheques(List<Cheque> chequeList);
 	

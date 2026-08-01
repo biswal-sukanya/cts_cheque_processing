@@ -13,7 +13,7 @@ public class ChequeRepositoryImpl implements ChequeRepository {
 	List<Cheque> cheques = new ArrayList<Cheque>();
 	
 	@Override
-	public List<Cheque> chequeRecords() {
+	public List<Cheque> getAllCheques() {
 		if(cheques.isEmpty()) {
 cheques.add(new Cheque("CHQ001", "S Sharma", "SBI", new BigDecimal("-215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ0020", "Aisha Khan", "HDFC", new BigDecimal("225000"), LocalDate.of(2026,7,3), LocalDate.of(2026,7,4), ChequePriority.NORMAL, ChequeStatus.RECEIVED));
