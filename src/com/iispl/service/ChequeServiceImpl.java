@@ -155,5 +155,10 @@ public class ChequeServiceImpl implements ChequeService {
 	  return chequeList.stream().filter(cheque->cheque.getChequeAmount().compareTo(new BigDecimal("200000"))>0)
 			  .sorted((c1,c2)->c2.getChequeAmount().compareTo(c1.getChequeAmount())).toList();
 	}
+	@Override
+	public List<Cheque> sortByChequeNumber(List<Cheque> chequeList) {
+		
+		return chequeList.stream().sorted().toList();
+	}
 	
 }
