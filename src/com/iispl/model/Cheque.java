@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import com.iispl.enums.ChequePriority;
 import com.iispl.enums.ChequeStatus;
 
-public class Cheque {
+public class Cheque implements Comparable<Cheque>{
 	
 	private String chequeNumber;
 	private String drawerName;
@@ -108,5 +108,11 @@ public class Cheque {
 	            presentedDate,
 	            priority,
 	            status);
+	}
+
+	@Override
+	public int compareTo(Cheque o) {
+		
+		return this.chequeNumber.compareTo(o.chequeNumber);
 	}
 }

@@ -26,11 +26,22 @@ public class ChequeDaoImpl implements ChequeDao{
 		
 		chequeList.sort((c1,c2)->{
 			
+			if(c1.getPriority() == null && c2.getPriority() == null) return 0;
+			
+			if(c1.getPriority()==null) return 1;
+			if(c2.getPriority()==null) return -1;
+			
 			int priorityCompare = c1.getPriority().compareTo(c2.getPriority());
 			
 			if(priorityCompare !=0) {
 				return priorityCompare;
 			}
+			
+			if(c1.getStatus() == null && c2.getStatus()==null) return 0;
+			
+			if(c1.getStatus()==null) return 1;
+			if(c2.getStatus()==null) return -1;
+			
 			return c1.getStatus().compareTo(c2.getStatus());
 		});
 			

@@ -8,6 +8,8 @@ import com.iispl.model.Cheque;
 
 public interface ChequeService {
 	
+	List<Cheque> sortByChequeNumber(List<Cheque> chequeList);
+	
     List<Cheque> sortByPresentingBankAndAmount(List<Cheque> chequeList);
 	
 	List<Cheque> sortByPriorityAndStatus(List<Cheque> chequeList);
@@ -25,6 +27,8 @@ public interface ChequeService {
 	void validateCheques(List<Cheque> chequeList);
 	
 	List<Cheque> displayHighValueCheque(List<Cheque> chequeList);
+	
+	
 	
 	
 }
