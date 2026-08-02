@@ -107,6 +107,7 @@ public class ChequeServiceImpl implements ChequeService {
 		for(Cheque cheque : chequeList){
 			
 			System.out.println("\n-------------------------------------------------------------");
+			System.out.println();
 			System.out.println("Cheque Number : "+ cheque.getChequeNumber()+"\n");
 			
 			boolean valid = true;
@@ -134,7 +135,7 @@ public class ChequeServiceImpl implements ChequeService {
 				
 			}
 			
-			System.out.println("Cheque Number     : " + cheque.getChequeNumber());
+			System.out.println("Cheque Date       : " + cheque.getChequeDate());
 			System.out.println("Drawer Name       : " + cheque.getDrawerName());
 			System.out.println("Cheque Amount     : " + cheque.getChequeAmount());
 			System.out.println("Presenting Bank   : " + cheque.getPresentingBank());
@@ -142,6 +143,7 @@ public class ChequeServiceImpl implements ChequeService {
 			System.out.println("Status            : " + cheque.getStatus());
 			
 			System.out.println("-------------------------------------------------------------");
+			System.out.println();
 		}
 		
 	}
