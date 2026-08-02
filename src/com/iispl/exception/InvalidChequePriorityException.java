@@ -4,6 +4,6 @@ public class InvalidChequePriorityException extends Exception {
 
 	@Override
 	public String getMessage() {
-		return "Invalid Cheque Priority";
+		return "\nInvalid Cheque Priority : Cheque Priority is mandatory cannot be null";
 	}
 }
