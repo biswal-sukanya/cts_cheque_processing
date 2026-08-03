@@ -19,6 +19,6 @@ public interface ChequeDao {
 	List<Cheque> sortChequeByDate(List<Cheque> chequeList);
 	
 	List<Cheque> getAllCheques();
-	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
+	List<Cheque> sortByClearingZoneAndAmountDescending(List<Cheque> chequeList);
 
 }

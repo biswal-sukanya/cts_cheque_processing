@@ -28,7 +28,7 @@ public interface ChequeService {
 	
 	List<Cheque> displayHighValueCheque(List<Cheque> chequeList);
 
-	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
+	List<Cheque> sortByClearingZoneAndAmountDescending(List<Cheque> chequeList);
 	
 	
 	
