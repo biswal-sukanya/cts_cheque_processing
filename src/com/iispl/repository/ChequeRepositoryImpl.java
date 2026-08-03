@@ -20,7 +20,7 @@ public class ChequeRepositoryImpl implements ChequeRepository {
 cheques.add(new Cheque("CHQ006", "S Sharma", "SBI",ClearingZone.BANGALORE, new BigDecimal("215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ002",null, "HDFC",ClearingZone.CHENNAI, new BigDecimal("225000"), LocalDate.of(2026,7,3), LocalDate.of(2026,7,4), ChequePriority.NORMAL, ChequeStatus.RECEIVED));
 cheques.add(new Cheque("CHQ003", "Rohit Kumar", "ICICI",ClearingZone.BANGALORE, new BigDecimal("5000"), LocalDate.of(2026,7,5), LocalDate.of(2026,7,6), ChequePriority.LOW, ChequeStatus.REJECTED));
-cheques.add(new Cheque("CHQ014", "Sneha Reddy", "Axis Bank",ClearingZone.HYDERABAD, new BigDecimal("475000"), LocalDate.of(2026,7,6), LocalDate.of(2026,7,7), null, ChequeStatus.SENT_FOR_CLEARING));
+cheques.add(new Cheque("CHQ014", "Sneha Reddy", "Axis Bank",ClearingZone.BANGALORE, new BigDecimal("5000"), LocalDate.of(2026,7,6), LocalDate.of(2026,7,7), null, ChequeStatus.SENT_FOR_CLEARING));
 cheques.add(new Cheque("CHQ005", "Arjun Patel", "Canara Bank",ClearingZone.BANGALORE, new BigDecimal("12000"), LocalDate.of(2026,7,7), LocalDate.of(2026,7,8), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ007", "Priya Nair", "Union Bank",ClearingZone.MUMBAI, new BigDecimal("9500"), LocalDate.of(2026,7,8), LocalDate.of(2026,7,9), ChequePriority.LOW, null));
 cheques.add(new Cheque("CHQ001", "Karan Mehta", "Karnataka Bank",ClearingZone.BANGALORE, new BigDecimal("60000"), LocalDate.of(2027,7,9), LocalDate.of(2026,7,10), ChequePriority.HIGH, ChequeStatus.VALIDATED));
@@ -28,7 +28,7 @@ cheques.add(new Cheque("CHQ008", "Neha Singh", "Bank of Baroda",ClearingZone.MUM
 cheques.add(new Cheque("CHQ009", "Vikas Gupta", "Indian Bank",ClearingZone.BANGALORE, new BigDecimal("23500"), LocalDate.of(2026,7,11), LocalDate.of(2026,7,12), ChequePriority.LOW, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ010", "Anjali Verma", "Kotak Mahindra",ClearingZone.HYDERABAD, new BigDecimal("45000"), LocalDate.of(2026,7,12), LocalDate.of(2026,7,13), ChequePriority.HIGH, ChequeStatus.RECEIVED));
 cheques.add(new Cheque("CHQ011", "Deepak Joshi", "Yes Bank",ClearingZone.CHENNAI, new BigDecimal("-21000"), LocalDate.of(2026,7,13), LocalDate.of(2026,7,14), ChequePriority.HIGH, ChequeStatus.SENT_FOR_CLEARING));
-cheques.add(new Cheque("CHQ012", "Pooja Das", "IndusInd Bank",ClearingZone.BANGALORE, new BigDecimal("7000"), LocalDate.of(2026,7,14), LocalDate.of(2026,7,15), ChequePriority.LOW, ChequeStatus.REJECTED));
+cheques.add(new Cheque("CHQ012", "Pooja Das", "IndusInd Bank",ClearingZone.HYDERABAD, new BigDecimal("7000000"), LocalDate.of(2026,7,14), LocalDate.of(2026,7,15), ChequePriority.LOW, ChequeStatus.REJECTED));
 cheques.add(new Cheque("CHQ013", "Mohit Agarwal", "Federal Bank",ClearingZone.CHENNAI, new BigDecimal("99000"), LocalDate.of(2026,7,15), LocalDate.of(2026,7,16), ChequePriority.HIGH, ChequeStatus.SENT_FOR_CLEARING));
 cheques.add(new Cheque("CHQ004", "Kavya Rao", "South Indian Bank",ClearingZone.BANGALORE, new BigDecimal("16000"), LocalDate.of(2026,7,16), LocalDate.of(2026,7,17), ChequePriority.LOW, ChequeStatus.RECEIVED));
 cheques.add(new Cheque("CHQ001", "Nikhil Jain",null,ClearingZone.BANGALORE, new BigDecimal("28000"), LocalDate.of(2026,7,17), LocalDate.of(2026,7,18), ChequePriority.LOW, ChequeStatus.REJECTED));

@@ -138,6 +138,9 @@ public class ChequeDaoImpl implements ChequeDao{
 			if(c2.getChequeAmount()==null) return -1;
 			
 			return c1.getChequeAmount().compareTo(c2.getChequeAmount());
+		});
+		return chequeList;
+	}
 	
 	
 	public List<Cheque> sortByClearingZoneAndAmountDescending(List<Cheque> chequeList){
@@ -163,6 +166,8 @@ public class ChequeDaoImpl implements ChequeDao{
 		});
 		return chequeList;
 	}
+
+	
 }
 
 
