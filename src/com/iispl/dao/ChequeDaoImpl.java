@@ -138,6 +138,7 @@ public class ChequeDaoImpl implements ChequeDao{
 			
 			if(c2.getChequeAmount()==null) return -1;
 			return c2.getChequeAmount().compareTo(c1.getChequeAmount());
+			
 		});
 		return chequeList;
 	}
