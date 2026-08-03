@@ -16,13 +16,13 @@ public class ChequeRepositoryImpl implements ChequeRepository {
 	public List<Cheque> getAllCheques() {
 		
 		if(cheques.isEmpty()) {
-cheques.add(new Cheque("CHQ05", "S Sharma", "SBI", new BigDecimal("215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
+cheques.add(new Cheque("CHQ006", "S Sharma", "SBI", new BigDecimal("215000"), LocalDate.of(2026,7,1), LocalDate.of(2026,7,2), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ002",null, "HDFC", new BigDecimal("225000"), LocalDate.of(2026,7,3), LocalDate.of(2026,7,4), ChequePriority.NORMAL, ChequeStatus.RECEIVED));
 cheques.add(new Cheque("CHQ003", "Rohit Kumar", "ICICI", new BigDecimal("5000"), LocalDate.of(2026,7,5), LocalDate.of(2026,7,6), ChequePriority.LOW, ChequeStatus.REJECTED));
 cheques.add(new Cheque("CHQ014", "Sneha Reddy", "Axis Bank", new BigDecimal("475000"), LocalDate.of(2026,7,6), LocalDate.of(2026,7,7), null, ChequeStatus.SENT_FOR_CLEARING));
 cheques.add(new Cheque("CHQ005", "Arjun Patel", "Canara Bank", new BigDecimal("12000"), LocalDate.of(2026,7,7), LocalDate.of(2026,7,8), ChequePriority.HIGH, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ007", "Priya Nair", "Union Bank", new BigDecimal("9500"), LocalDate.of(2026,7,8), LocalDate.of(2026,7,9), ChequePriority.LOW, null));
-cheques.add(new Cheque("CHQ006", "Karan Mehta", "Karnataka Bank", new BigDecimal("60000"), LocalDate.of(2027,7,9), LocalDate.of(2026,7,10), ChequePriority.HIGH, ChequeStatus.VALIDATED));
+cheques.add(new Cheque("CHQ001", "Karan Mehta", "Karnataka Bank", new BigDecimal("60000"), LocalDate.of(2027,7,9), LocalDate.of(2026,7,10), ChequePriority.HIGH, ChequeStatus.VALIDATED));
 cheques.add(new Cheque("CHQ008", "Neha Singh", "Bank of Baroda", new BigDecimal("18000"), LocalDate.of(2026,7,10), LocalDate.of(2026,7,11), ChequePriority.NORMAL, ChequeStatus.VALIDATED));
 cheques.add(new Cheque("CHQ009", "Vikas Gupta", "Indian Bank", new BigDecimal("23500"), LocalDate.of(2026,7,11), LocalDate.of(2026,7,12), ChequePriority.LOW, ChequeStatus.ACCEPTED));
 cheques.add(new Cheque("CHQ010", "Anjali Verma", "Kotak Mahindra", new BigDecimal("45000"), LocalDate.of(2026,7,12), LocalDate.of(2026,7,13), ChequePriority.HIGH, ChequeStatus.RECEIVED));
