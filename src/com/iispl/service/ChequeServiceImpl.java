@@ -78,8 +78,23 @@ public class ChequeServiceImpl implements ChequeService {
 
 		    System.out.println();
 
-		    chequeList.forEach(System.out::println);
+		    for (Cheque cheque : chequeList) {
 
+		        if (cheque.getChequeNumber() == null
+		                || cheque.getDrawerName() == null
+		                || cheque.getPresentingBank() == null
+		                || cheque.getChequeAmount() == null
+		                || cheque.getChequeDate() == null
+		                || cheque.getPresentedDate() == null
+		                || cheque.getPriority() == null
+		                || cheque.getStatus() == null) {
+
+		            continue;   // Skip this cheque
+		        }
+		    
+
+		        System.out.println(cheque);
+		    }
 		    System.out.println("========================================================================================================================================");
 	}
 	
