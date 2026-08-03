@@ -117,6 +117,7 @@ public class ChequeDaoImpl implements ChequeDao{
 		
 		return chequeRepository.getAllCheques();
 	}
+// feature/sortByClearingZoneAndChequeAmountAscending
 
 	@Override
 	public List<Cheque> sortByClearingzoneAndChequeamountAscending(List<Cheque> chequeList) {
@@ -137,8 +138,19 @@ public class ChequeDaoImpl implements ChequeDao{
 			if(c2.getChequeAmount()==null) return -1;
 			
 			return c1.getChequeAmount().compareTo(c2.getChequeAmount());
+	
+	
+	public List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList){
+		Collections.sort(chequeList,(c1,c2)->{
+			int zone=c1.getClearingZone().compareTo(c2.getClearingZone());
+			if(zone!=0) {
+				return zone;
+			}
+			return c2.getChequeAmount().compareTo(c1.getChequeAmount());
 		});
 		return chequeList;
 	}
 }
+
+
 
