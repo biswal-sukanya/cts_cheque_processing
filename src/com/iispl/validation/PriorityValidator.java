@@ -1,6 +1,7 @@
 package com.iispl.validation;
 
 import com.iispl.exception.InvalidChequePriorityException;
+
 import com.iispl.model.Cheque;
 
 public class PriorityValidator implements Validator{
@@ -12,5 +13,4 @@ public class PriorityValidator implements Validator{
 			throw new InvalidChequePriorityException();
 		}
 	}
-
 }
