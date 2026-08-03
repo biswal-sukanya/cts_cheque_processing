@@ -27,7 +27,8 @@ public interface ChequeService {
 	void validateCheques(List<Cheque> chequeList);
 	
 	List<Cheque> displayHighValueCheque(List<Cheque> chequeList);
-	
+
+	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
 	
 	
 	
