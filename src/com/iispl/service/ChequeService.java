@@ -33,7 +33,7 @@ public interface ChequeService {
 
 // feature/addsortbyclearingZoneandAmount
 	List<Cheque> sortByClearingZoneAndAmountDescending(List<Cheque> chequeList);
-	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
+//	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
 
 	
 	

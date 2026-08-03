@@ -25,6 +25,6 @@ public interface ChequeDao {
 // feature/sortByClearingZoneAndChequeAmountAscending
 	
 	List<Cheque> sortByClearingzoneAndChequeamountAscending(List<Cheque> chequeList);
-	List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList);
+	
 
 }

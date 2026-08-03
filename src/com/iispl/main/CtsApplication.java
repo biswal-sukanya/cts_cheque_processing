@@ -31,7 +31,9 @@ public static void main(String[] args) {
 	    System.out.println("7. Sort By Presenting Bank And Amount");
 	    System.out.println("8. Sort By Cheque Date and Presented date");
 	    System.out.println("9. Display High Value Cheques");
-	    System.out.println("10. Exit");
+	    System.out.println("10. Sort By Clearing Zone and Amount Ascending");
+	    System.out.println("11. Sort By Clearing Zone and Amount Decending");
+	    System.out.println("12. Exit");
         System.out.println("\nEnter Your Choice : ");
         try {
         	
@@ -87,14 +89,22 @@ public static void main(String[] args) {
 	    	 chequeService.displayAllCheques(
 	    	       chequeService.displayHighValueCheque(chequeList));
 	        break;
-	        
 	    case 10:
+	    	 chequeService.displayAllCheques(
+	    	       chequeService.sortByClearingzoneAndChequeamountAscending(chequeList));
+	        break;
+	    case 11:
+	    	 chequeService.displayAllCheques(
+	    	       chequeService.sortByClearingZoneAndAmountDescending(chequeList));
+	        break;
+	        
+	    case 12:
 	    	System.out.println("Thank You..."); break;
 
 	    default:
 	        System.out.println("Invalid Choice");
 	    }
 
-	} while (choice != 10);
+	} while (choice != 12);
 }
 }
