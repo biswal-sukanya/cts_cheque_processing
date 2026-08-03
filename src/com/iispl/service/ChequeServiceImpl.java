@@ -2,6 +2,7 @@ package com.iispl.service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.iispl.dao.ChequeDao;
@@ -172,7 +173,9 @@ public class ChequeServiceImpl implements ChequeService {
 	@Override
 	public List<Cheque> sortByChequeNumber(List<Cheque> chequeList) {
 		
-		return chequeList.stream().sorted().toList();
+		 Collections.sort(chequeList);
+		 
+		 return chequeList;
 	}
 	
 }
