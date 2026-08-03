@@ -88,10 +88,24 @@ public class ChequeDaoImpl implements ChequeDao{
 		
 		
 		Collections.sort(chequeList,(c1,c2)->{
+			
+			if(c1.getPresentingBank() == null && c2.getPresentingBank()==null) return 0;
+			
+			if(c1.getPresentingBank()==null) return 1;
+			
+			if(c2.getPresentingBank()==null) return -1;
+			
 			int bank=c1.getPresentingBank().compareTo(c2.getPresentingBank());
 			if(bank!=0) {
 				return bank;
 			}
+			
+			if(c1.getChequeAmount()==null && c2.getChequeAmount()==null) return 0;
+			
+			if(c1.getChequeAmount()==null) return 1;
+			
+			if(c2.getChequeAmount()==null) return -1;
+			
 			return c1.getChequeAmount().compareTo(c2.getChequeAmount());
 		});	
 		return chequeList;
