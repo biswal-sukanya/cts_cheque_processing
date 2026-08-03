@@ -66,11 +66,12 @@ public class ChequeServiceImpl implements ChequeService {
 		        return;
 		    }
 
-		    System.out.println("========================================================================================================================================");
-		    System.out.printf("%-10s %-20s %-20s %-12s %-15s %-15s %-15s %-15s%n",
+		    System.out.println("================================================================================================================================================");
+		    System.out.printf("%-10s %-20s %-20s %-15s %-12s %-15s %-15s %-15s %-15s%n",
 		            "Cheque No",
 		            "Drawer Name",
 		            "Presenting Bank",
+		            "Clearing Zone",
 		            "Amount",
 		            "Cheque Date",
 		            "Presented Date",
@@ -82,7 +83,7 @@ public class ChequeServiceImpl implements ChequeService {
 		    for (Cheque cheque : chequeList) {
 
 		        if (cheque.getChequeNumber() == null
-		                || cheque.getDrawerName() == null
+		           || cheque.getDrawerName() == null
 		                || cheque.getPresentingBank() == null
 		                || cheque.getChequeAmount() == null
 		                || cheque.getChequeDate() == null
@@ -96,7 +97,7 @@ public class ChequeServiceImpl implements ChequeService {
 
 		        System.out.println(cheque);
 		    }
-		    System.out.println("========================================================================================================================================");
+		    System.out.println("===============================================================================================================================================");
 	}
 	
 	
