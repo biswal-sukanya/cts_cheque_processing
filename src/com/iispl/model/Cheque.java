@@ -5,25 +5,28 @@ import java.time.LocalDate;
 
 import com.iispl.enums.ChequePriority;
 import com.iispl.enums.ChequeStatus;
+import com.iispl.enums.ClearingZone;
 
 public class Cheque implements Comparable<Cheque>{
 	
 	private String chequeNumber;
 	private String drawerName;
 	private String presentingBank;
+	private ClearingZone clearingZone;
 	private BigDecimal chequeAmount;
 	private LocalDate chequeDate;
 	private LocalDate presentedDate;
 	private ChequePriority priority;
 	private ChequeStatus status;
 	
-	public Cheque(String chequeNumber, String drawerName, String presentingBank,
+	public Cheque(String chequeNumber, String drawerName, String presentingBank, ClearingZone clearingZone,
 			   BigDecimal chequeAmount,LocalDate chequeDate, LocalDate presentedDate, 
 			   ChequePriority priority, ChequeStatus status) {
 		
 		this.chequeNumber = chequeNumber;
 		this.drawerName = drawerName;
 		this.presentingBank = presentingBank;
+		this.clearingZone = clearingZone;
 		this.chequeAmount = chequeAmount;
 		this.chequeDate = chequeDate;
 		this.presentedDate = presentedDate;
@@ -31,6 +34,14 @@ public class Cheque implements Comparable<Cheque>{
 		this.status = status;
 	}
 
+	public ClearingZone getClearingZone() {
+		 return this.clearingZone;
+	}
+	
+	public void setClearingZone() {
+		this.clearingZone = clearingZone;
+	}
+	
 	public String getChequeNumber() {
 		return chequeNumber;
 	}
@@ -99,10 +110,11 @@ public class Cheque implements Comparable<Cheque>{
 	public String toString() {
 
 	    return String.format(
-	            "%-10s %-20s %-20s %-12s %-15s %-15s %-15s %-15s",
+	            "%-10s %-20s %-20s %-15s %-12s %-15s %-15s %-15s %-15s",
 	            chequeNumber,
 	            drawerName,
 	            presentingBank,
+	            clearingZone,
 	            chequeAmount,
 	            chequeDate,
 	            presentedDate,
