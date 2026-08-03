@@ -179,8 +179,21 @@ public class ChequeServiceImpl implements ChequeService {
 		 return chequeList;
 	}
 	@Override
+//  feature/addsortbyclearingZoneandAmount
 	public List<Cheque> sortByClearingZoneAndAmountDescending(List<Cheque> chequeList) {
 		return chequeDao.sortByClearingZoneAndAmountDescending(chequeList);
+
+//  feature/sortByClearingZoneAndChequeAmountAscending
+	public List<Cheque> sortByClearingzoneAndChequeamountAscending(List<Cheque> chequeList) {
+		
+		return chequeDao.sortByClearingzoneAndChequeamountAscending(chequeList);
+		
+	}
+	
+	
+
+	public List<Cheque> sortByClearingZoneAndAmount(List<Cheque> chequeList) {
+		return chequeDao.sortByClearingZoneAndAmount(chequeList);
 	}
 	
 }
