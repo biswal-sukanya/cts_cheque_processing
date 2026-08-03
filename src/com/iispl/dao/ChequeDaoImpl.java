@@ -149,18 +149,18 @@ public class ChequeDaoImpl implements ChequeDao{
 
 			if(c1.getClearingZone() == null && c2.getClearingZone()==null) return 0;
 			
-			if(c1.getClearingZone()==null) return 1;
+			if(c1.getClearingZone()==null) return -1;
 			
-			if(c2.getClearingZone()==null) return -1;
-			int zone=c1.getClearingZone().compareTo(c2.getClearingZone());
+			if(c2.getClearingZone()==null) return 1;
+			int zone=c2.getClearingZone().compareTo(c1.getClearingZone());
 			if(zone!=0) {
 				return zone;
 			}
 			if(c1.getChequeAmount()==null && c2.getChequeAmount()==null) return 0;
 			
-			if(c1.getChequeAmount()==null) return 1;
+			if(c1.getChequeAmount()==null) return -1;
 			
-			if(c2.getChequeAmount()==null) return -1;
+			if(c2.getChequeAmount()==null) return 1;
 			return c2.getChequeAmount().compareTo(c1.getChequeAmount());
 			
 		});
