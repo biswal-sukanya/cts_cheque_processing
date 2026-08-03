@@ -137,7 +137,6 @@ public class ChequeServiceImpl implements ChequeService {
 					
 					valid = false;
 					
-					cheque.setStatus(ChequeStatus.REJECTED);
 					System.out.println(validator.getClass().getSimpleName()+" : "+e.getMessage());
 					System.out.println();
 				}
